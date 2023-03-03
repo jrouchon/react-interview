@@ -1,0 +1,43 @@
+$primary: #3F51B5;
+$secondary: #9FA8DA;
+$tertiary: #f4f4f4; //darken 70% 4th
+$quaternary: #292929;
+
+* {
+    font-family: 'Lato', sans-serif;
+    color: darken($tertiary, 70%);
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+    background: $tertiary;
+}
+
+li {
+    cursor: pointer;
+    list-style: none;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    width: 100%;
+    height: 150px;
+    color: $primary;
+    .logo-wrapper {
+        display: flex;
+        align-items: center;
+        background: #fff;
+        margin-left: 20px;
+    }
+    .logo {
+        width: 100px;
+        background: #fff; //ae
+    }
+    h1 {
+        background: #fff; //ae
+        color: $primary;
+    }
+}
