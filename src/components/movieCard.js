@@ -1,15 +1,15 @@
 //import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
 import { FaTrashAlt } from 'react-icons/fa';
 import Likes from "./like.js";
-
+import { deleteMovieAction } from "../features/moviesSlice";
 
 //id: '1', title: 'Oceans 8', category: 'Comedy', likes: 4, dislikes: 1 
 // to do : 
-// onclick delete fatrashalt
 //
 //
 const MovieCard = ({ movie }) => {
-    
+    const dispatch = useDispatch();
     
 
     return (
@@ -25,7 +25,7 @@ const MovieCard = ({ movie }) => {
                 <div className="cardAction">
                     <Likes movie={movie} />
                     <div className="movieDelete-wrapper">
-                        <FaTrashAlt className="deleteToggle toggle" />
+                        <FaTrashAlt className="deleteToggle toggle" onClick={() => { dispatch(deleteMovieAction(movie.id)) }}/>
                     </div>
                 </div>
             </div>
@@ -34,13 +34,5 @@ const MovieCard = ({ movie }) => {
         </div>
     )
 }
-
-/*
-    <Like post={post} />
-    <div className="postGestion-wrapper">
-        <FontAwesomeIcon icon={faTrash} className="deleteToggle action-btn" onClick={deleteToggle} />
-            { deleted ? <DeletePost post={post} /> : null }
-    </div>
-*/
 
 export default MovieCard;
