@@ -3,6 +3,7 @@ import { useEffect, useCallback } from 'react';
 import { movies$ } from './data/movies.js';
 import { useDispatch, useSelector } from 'react-redux';
 import { setMoviesData } from './features/moviesSlice';
+import MovieCard from "./components/movieCard";
 
 function App() {
   //const [moviesData, setMoviesData] = useState([]);
@@ -30,7 +31,9 @@ function App() {
       </header>
       <main>
         <div className="cards-wrapper">
-          {moviesData?.map((movie, index) => (console.log(index, movie.id , "movie : ", movie.title)))}
+          {moviesData?.map((movie, index) => (
+            <MovieCard key={index} movie={movie}/>
+            ))}
         </div>
       
       </main>

@@ -5,12 +5,15 @@
   margin: 0;
   box-sizing: border-box;
   letter-spacing: 1px;
-  background: #f4f4f4;
 }
 
 li {
   cursor: pointer;
   list-style: none;
+}
+
+.toggle {
+  cursor: pointer;
 }
 
 .header {
@@ -21,6 +24,11 @@ li {
   width: 100%;
   height: 150px;
   color: #3F51B5;
+}
+@media (max-width: 1000px) {
+  .header {
+    justify-content: space-around;
+  }
 }
 .header .logo-wrapper {
   display: flex;
@@ -35,4 +43,94 @@ li {
 .header h1 {
   background: #fff;
   color: #3F51B5;
+}
+
+main {
+  background: #f4f4f4;
+}
+
+.cards-wrapper {
+  margin: 0px 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+}
+@media (max-width: 1000px) {
+  .cards-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+}
+@media (max-width: 735px) {
+  .cards-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.card-wrapper {
+  height: 30vh;
+  background-color: #fff;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 3px 10px 5px #dbdbdb;
+}
+.card-wrapper .card {
+  height: 100%;
+}
+.card-wrapper .card .cardHeader {
+  height: 20%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.card-wrapper .card .cardHeader .movieTitle {
+  font-weight: bold;
+  font-size: 20px;
+  color: #3F51B5;
+}
+.card-wrapper .card .cardContent-wrapper {
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.card-wrapper .card .cardContent-wrapper .movieCategory {
+  font-size: 18px;
+}
+.card-wrapper .card .cardAction {
+  height: 60%;
+}
+.card-wrapper .card .cardAction .likesDislikes-wrapper {
+  height: 70%;
+  margin: 0px 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.card-wrapper .card .cardAction .likesDislikes-wrapper .likesDislikes-toggle-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.card-wrapper .card .cardAction .likesDislikes-wrapper .likesDislikes-toggle-wrapper .ldtoggle {
+  font-size: 28px;
+}
+.card-wrapper .card .cardAction .likesDislikes-wrapper .likesDislikes-toggle-wrapper .ldtoggle:hover {
+  transform: scale(1.1);
+}
+.card-wrapper .card .cardAction .likesDislikes-wrapper .likesDislikes-toggle-wrapper .count-toggle {
+  padding: 5px;
+  font-size: 20px;
+  color: #5565be;
+}
+.card-wrapper .card .cardAction .movieDelete-wrapper {
+  height: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 18px;
+}
+.card-wrapper .card .cardAction .movieDelete-wrapper .deleteToggle:hover {
+  transform: scale(1.1);
 }/*# sourceMappingURL=index.css.map */
