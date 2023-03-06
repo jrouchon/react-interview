@@ -51,6 +51,30 @@ main {
     background: $tertiary;
 }
 
+.multiselect-wrapper {
+    padding: 20px 30px 10px 30px;
+    .multiselect {
+        .css-13cymwt-control {
+            border-color: darken($tertiary, 30%);
+            border-radius: 20px;
+            border-width: 2px;
+        }
+        .css-1p3m7a8-multiValue {
+            border-radius: 20px;
+            background-color: lighten($secondary, 15%);
+            .css-12a83d4-MultiValueRemove {
+                border-radius: 20px;
+            }
+        }
+        .css-t3ipsp-control {
+            border-radius: 20px;
+            border-color: $primary;
+            box-shadow: 0 0 0 1px $primary;
+
+        }
+    }
+}
+
 .cards-wrapper {
     margin: 0px 30px;
     display: grid;
@@ -70,7 +94,9 @@ main {
     background-color: #fff;
     margin: 10px;
     border-radius: 10px;
+    //border: solid darken($tertiary, 20%) 1px;
     box-shadow: 0px 3px 10px 5px darken($tertiary, 10%);
+
     .card {
         height : 100%;
         .cardHeader {

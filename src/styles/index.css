@@ -49,6 +49,27 @@ main {
   background: #f4f4f4;
 }
 
+.multiselect-wrapper {
+  padding: 20px 30px 10px 30px;
+}
+.multiselect-wrapper .multiselect .css-13cymwt-control {
+  border-color: #a8a8a8;
+  border-radius: 20px;
+  border-width: 2px;
+}
+.multiselect-wrapper .multiselect .css-1p3m7a8-multiValue {
+  border-radius: 20px;
+  background-color: #d6daef;
+}
+.multiselect-wrapper .multiselect .css-1p3m7a8-multiValue .css-12a83d4-MultiValueRemove {
+  border-radius: 20px;
+}
+.multiselect-wrapper .multiselect .css-t3ipsp-control {
+  border-radius: 20px;
+  border-color: #3F51B5;
+  box-shadow: 0 0 0 1px #3F51B5;
+}
+
 .cards-wrapper {
   margin: 0px 30px;
   display: grid;
